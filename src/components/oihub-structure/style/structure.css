@@ -1,0 +1,73 @@
+.oihub-structure {
+  width: 100vw;
+  height: 100vh;
+  padding: 50px 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .oihub-structure {
+    height: 275vh;
+  }
+}
+
+.oihub-structure .container-fluid h1 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 450px) {
+  .oihub-structure .container-fluid h1 {
+    font-size: 2.2rem;
+  }
+}
+
+.oihub-structure .container-fluid h1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  width: 100px;
+  background-color: var(--main-color);
+  -webkit-transform: translateX(110px);
+          transform: translateX(110px);
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+.oihub-structure .container-fluid h1:hover::before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  width: 50px;
+}
+
+.oihub-structure .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .oihub-structure .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.oihub-structure .cards .test {
+  background-color: var(--light) !important;
+  color: var(--dark) !important;
+  height: 50vh;
+}
+/*# sourceMappingURL=structure.css.map */
